@@ -60,7 +60,7 @@ nav a:hover{
 }
 h1{
     width: 100%;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     text-align: center;
     font-size: 14vw;
@@ -136,6 +136,7 @@ figure{
 
 #last{
     overflow: hidden;
+    font-size=1.2em;
 }
 #tz img{
     float: right;
