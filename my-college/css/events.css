@@ -74,7 +74,7 @@ h1{
 }
 .gallary img{
     opacity: 0;
-    transition: all 0.6s;
+    /* transition: all 0.6s; */
 }
 section h2{
     margin: 0;
@@ -104,7 +104,7 @@ section h2{
     width: 25vw;
     max-height: calc(calc(100vh - 160px) / 4.2);
     box-shadow: black 4px 4px 5px 1px;
-    transition:all 0.5s;
+    /* transition:all 0.5s; */
     transform-origin: center;
 }
 .tall{
@@ -136,7 +136,7 @@ figure{
 
 #last{
     overflow: hidden;
-    font-size=1.2em;
+    font-size: 1.2em;
 }
 #tz img{
     float: right;
