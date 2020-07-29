@@ -46,14 +46,11 @@ nav a:hover{
     color: white;
     box-shadow: 5px 3px 10px cyan;
 }
-main{
-    position: relative;
-}
 
 #parallax{
     height: calc(100vh - 70px);
     width: 100%;
-    background-image: url(../img/fest.jpg);
+    background-image: url(../img/fest1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -66,21 +63,29 @@ h1{
     font-family: cursive;
     text-transform: uppercase;
     text-align: center;
-    font-size: 12vw;
+    font-size: 14vw;
     color: rgba(255,255,255,0.9);
     margin: 0;
-    line-height: 12vw;
+    /* line-height: 14vw; */
+    font-weight: bolder;
 }
 .scroll{
     display: inline-block;
+}
+.gallary img{
+    opacity: 0;
+    transition: all 0.6s;
 }
 section h2{
     margin: 0;
     padding: 15px;
     line-height: 40px;
     box-sizing: border-box;
-    background-color: blue;
+    background-color: #ff5e5be0;
     height: 70px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s;
 }
 .gallary{
     height: calc(100vh - 70px);
@@ -128,11 +133,18 @@ figure{
     transform: rotateZ(15deg);
     text-shadow: black 2px 2px 2px;
 }
+
+#last{
+    overflow: hidden;
+}
 #tz img{
     float: right;
 }
 #tz{
     position: relative;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s;
 }
 #tz span{
     position: absolute;
@@ -142,10 +154,14 @@ figure{
 }
 #ss{
     position: relative;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s;
 }
 #ss span{
     position: absolute;
     width: 50%;
+    text-align: center;
 }
 #ss img{
     float: left;
@@ -154,18 +170,17 @@ figure{
     height: 50%;
     width: 100%;
     font-family: cursive;
-    font-size: 4vw;
     font-weight: bold;
 }
 #last div img{
     width: 45%;
-    max-height: 100%;
+    max-height: 80%;
     margin: 0px 10px;
+    max-width: 230px;
 }
 #last div aside{
     box-sizing: border-box;
     height: 100%;
-    /*width: 100%;*/
     font-family: cursive;
     font-size: 1.2em;
     line-height: 100%;
@@ -233,7 +248,9 @@ footer i:hover{
     nav a{
         width: 10%;
     }
-    
+    h1{
+        font-size: 11vw;
+    }
     footer aside img{
         height: 100%;
     }
@@ -245,5 +262,13 @@ footer i:hover{
     }
     .wide{
         max-width: 250px;
+    }
+    #last{
+        font-size: 2.5vw;
+        display: flex;
+        align-items: center;
+    }
+    #last div{
+        height: 100%;
     }
 }
