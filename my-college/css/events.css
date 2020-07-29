@@ -175,20 +175,8 @@ figure{
 #last div img{
     width: 45%;
     max-height: 80%;
-    margin: 0px 10px;
+    margin:10px;
     max-width: 230px;
-}
-#last div aside{
-    box-sizing: border-box;
-    height: 100%;
-    font-family: cursive;
-    font-size: 1.2em;
-    line-height: 100%;
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 10px;
 }
 #tz{
     background-color: #FE938C;
