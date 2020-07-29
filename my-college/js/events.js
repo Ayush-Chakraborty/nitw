@@ -87,11 +87,63 @@ function snapScroll(){
 }
 const lastSection=document.getElementById('last');
 const footer =document.getElementsByTagName('footer')[0];
-lastSection.style.height=`calc(100vh - 70px - ${footer.offsetHeight}px)`;
+if(window.innerWidth < 900)
+    lastSection.style.height=`calc(100vh - 70px - ${footer.offsetHeight}px)`;
+else
+    lastSection.style.height=`calc(calc(100vh - 70px - ${footer.offsetHeight}px) / 2)`;
 var lastImages=document.querySelectorAll("#last img");
-var margin_=(lastSection.offsetHeight/2 -  lastImages[0].height)/2;
+var lastSectionDiv=document.querySelector('#last div');
+var margin_=(lastSectionDiv.offsetHeight -  lastImages[0].height)/2;
 lastImages[0].style.margin=`${margin_}px 10px`;
 lastImages[1].style.margin=`${margin_}px 10px`;
  var spans=document.querySelectorAll('#last span');
  spans[0].style.top=`${(lastSection.offsetHeight/2 - spans[0].offsetHeight)/2}px`;
  spans[1].style.top=`${(lastSection.offsetHeight/2 - spans[1].offsetHeight)/2}px`;
+
+ var headings=document.getElementsByTagName('h2');
+var tz=document.getElementById('tz');
+var ss=document.getElementById('ss');
+ function showHeading(){
+     for(var i=0;i<headings.length;i++)
+     {
+        if(window.innerHeight+window.scrollY > headings[i].offsetTop+100)
+        {
+            headings[i].setAttribute("style","transform:translateX(0px)");
+            headings[i].style.opacity='1';
+            document.querySelectorAll(`#${headings[i].id} + div img`).forEach(function(item){
+                item.style.opacity="1";
+            });
+            
+        }
+        else
+        {
+            headings[i].setAttribute("style","transform:translateX(-100%)");
+            headings[i].style.opacity='0';
+            document.querySelectorAll(`#${headings[i].id} + div img`).forEach(function(item){
+                item.style.opacity="0";
+            });
+        }
+        if(window.innerHeight+window.scrollY >tz.offsetTop+100)
+        {
+            tz.setAttribute("style","transform:translateX(0px)");
+            tz.style.opacity='1';
+            ss.setAttribute("style","transform:translateX(0px)");
+            ss.style.opacity='1';
+        }
+        else{
+            tz.setAttribute("style","transform:translateX(100%)");
+            tz.style.opacity='0';
+            ss.setAttribute("style","transform:translateX(-100%)");
+            ss.style.opacity='0';
+        }
+     }
+     
+ }
+ window.addEventListener('scroll',showHeading);
+ function scrollToTop(){
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+}
