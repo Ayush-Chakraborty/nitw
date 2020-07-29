@@ -1,0 +1,249 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #a6cab2;
+    padding-top: 70px;
+}
+
+@media screen and (max-width:350px){
+    footer aside img{
+        visibility: collapse;
+    }
+}
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+nav{
+    background-color: #151640c7;
+    height:70px;
+}
+
+nav a{
+    display: inline-block;
+    background-color: #2eaacead;
+    margin: 15px 0% 15px 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid cyan;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: 0.5s background-color;
+}
+
+#active{
+    background-color: #083D77;
+}
+nav a:hover{
+    background-color: #151640c7;
+    color: white;
+    box-shadow: 5px 3px 10px cyan;
+}
+main{
+    position: relative;
+}
+
+#parallax{
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-image: url(../img/fest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    width: 100%;
+    font-family: cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12vw;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+    line-height: 12vw;
+}
+.scroll{
+    display: inline-block;
+}
+section h2{
+    margin: 0;
+    padding: 15px;
+    line-height: 40px;
+    box-sizing: border-box;
+    background-color: blue;
+    height: 70px;
+}
+.gallary{
+    height: calc(100vh - 70px);
+}
+.container{
+    height: calc(100% - 90px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    padding: 10px;
+}
+.container img{
+    margin: 0px 10px;
+    width: 25vw;
+    max-height: calc(calc(100vh - 160px) / 4.2);
+    box-shadow: black 4px 4px 5px 1px;
+    transition:all 0.5s;
+    transform-origin: center;
+}
+.tall{
+    max-width: 120px;
+}
+.wide{
+    max-width: 160px;
+}
+.container div{
+    position: relative;
+}
+figure{
+    padding: 0;
+    margin: 0;
+}
+
+.container figure::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    font-weight: 900;
+    content: "\f08d";
+    z-index: 1;
+    left: 50%;
+    top: -0.5em;
+    color: #ff9800db;
+    transform: rotateZ(15deg);
+    text-shadow: black 2px 2px 2px;
+}
+#tz img{
+    float: right;
+}
+#tz{
+    position: relative;
+}
+#tz span{
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 10px;
+}
+#ss{
+    position: relative;
+}
+#ss span{
+    position: absolute;
+    width: 50%;
+}
+#ss img{
+    float: left;
+}
+#last div{
+    height: 50%;
+    width: 100%;
+    font-family: cursive;
+    font-size: 4vw;
+    font-weight: bold;
+}
+#last div img{
+    width: 45%;
+    max-height: 100%;
+    margin: 0px 10px;
+}
+#last div aside{
+    box-sizing: border-box;
+    height: 100%;
+    /*width: 100%;*/
+    font-family: cursive;
+    font-size: 1.2em;
+    line-height: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px;
+}
+#tz{
+    background-color: #FE938C;
+}
+
+#ss{
+    background-color: #4281A4;
+}
+footer{
+    background-color: #4E5283;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    line-height: 1.1em;
+}
+footer section p{
+    padding: 10px 15px;
+}
+footer section{
+    margin-left: 10%;
+}
+footer aside{
+    margin-right: 10%;
+}
+ footer i{
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: 0.4s font-size;
+ }
+#icon_list{
+    display: flex;
+    justify-content: space-between;
+}
+footer details{
+    padding: 10px 15px 10px 0px;
+}
+footer img{
+    height: 50%;
+    float: right;
+    border-radius: 5px;
+}
+footer a{
+    color: black;
+    text-decoration: none;
+    line-height: 1.2em;
+}
+footer section p{
+    margin: 0;
+    padding-left: 0;
+}
+footer i:hover{
+    font-size: 1.7em;
+    opacity: 0.8;
+}
+@media screen and (min-width:900px){
+    nav a{
+        width: 10%;
+    }
+    
+    footer aside img{
+        height: 100%;
+    }
+    .container img{
+        max-height: calc(calc(100vh - 160px) / 3.2);
+    }
+    .tall{
+        max-width: 150px;
+    }
+    .wide{
+        max-width: 250px;
+    }
+}
