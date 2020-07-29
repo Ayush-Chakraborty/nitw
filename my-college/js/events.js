@@ -66,6 +66,7 @@ function figureInFocus(el)
         el.style.top="50%";
         el.style.left="50%";
         el.style.transform='translate(-50%,-50%)';
+        el.style.transition="all 0.5s";
         changed=true;
     }
     else{
@@ -76,6 +77,7 @@ function figureInFocus(el)
         prevFig.style.boxShadow=prevBoxShadow;
         prevFig.style.transform=prevTransform;
         prevFig.style.position="static";
+        prevFig.style.transition="";
         changed=false;
     }
 }
