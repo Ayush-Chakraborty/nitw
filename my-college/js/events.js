@@ -91,11 +91,6 @@ if(window.innerWidth < 900)
     lastSection.style.height=`calc(100vh - 70px - ${footer.offsetHeight}px)`;
 else
     lastSection.style.height=`calc(calc(100vh - 70px - ${footer.offsetHeight}px) / 2)`;
-var lastImages=document.querySelectorAll("#last img");
-var lastSectionDiv=document.querySelector('#last div');
-var margin_=(lastSectionDiv.offsetHeight -  lastImages[0].height)/2;
-lastImages[0].style.margin=`${margin_}px 10px`;
-lastImages[1].style.margin=`${margin_}px 10px`;
  var spans=document.querySelectorAll('#last span');
  spans[0].style.top=`${(lastSection.offsetHeight/2 - spans[0].offsetHeight)/2}px`;
  spans[1].style.top=`${(lastSection.offsetHeight/2 - spans[1].offsetHeight)/2}px`;
